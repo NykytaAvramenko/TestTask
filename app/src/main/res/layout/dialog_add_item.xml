@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:textSize="@dimen/text_size"
+        android:id="@+id/editTextIconUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_icon_url"
+        android:maxHeight="@dimen/edit_text_url_max_height_100dp" />
+
+    <EditText
+        android:textSize="@dimen/text_size"
+        android:id="@+id/editTextDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextIconUrl"
+        android:layout_alignParentStart="true"
+        android:hint="@string/hint_description" />
+
+    <TextView
+        android:textSize="@dimen/text_size"
+        android:id="@+id/textViewImproperInput"
+        android:textColor="@color/app_red_improper_input"
+        android:text="@string/empty_description_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editTextDescription" />
+
+</RelativeLayout>

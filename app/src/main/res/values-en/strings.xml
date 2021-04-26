@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Test task</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="dialog_button_ok">OK</string>
+    <string name="hint_icon_url">image link</string>
+    <string name="empty_description_message">Description field can\'t be empty!</string>
+    <string name="hint_description">description</string>
+</resources>

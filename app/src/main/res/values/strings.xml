@@ -1,0 +1,8 @@
+<resources>
+    <string name="dialog_button_cancel">Отмена</string>
+    <string name="dialog_button_ok">ОК</string>
+    <string name="hint_icon_url">ссылка на изображение</string>
+    <string name="empty_description_message">Поле с описанием не может быть пустым!</string>
+    <string name="hint_description">описание</string>
+    <string name="app_name">Тестовое</string>
+</resources>
