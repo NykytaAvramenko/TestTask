@@ -6,29 +6,29 @@
 
     <ImageView
         android:id="@+id/imageViewIcon"
-        android:layout_width="@dimen/side_of_square_image_80dp"
-        android:layout_height="@dimen/side_of_square_image_80dp"
+        android:layout_width="@dimen/recycler_square_image_side_80dp"
+        android:layout_height="@dimen/recycler_square_image_side_80dp"
 
         android:scaleType="centerCrop"
 
-        android:layout_marginLeft="@dimen/margin_element_in_recycler_20dp"
-        android:layout_marginRight="@dimen/margin_element_in_recycler_20dp"
-        android:layout_marginBottom="@dimen/margin_element_in_recycler_20dp"
-        android:background="@color/app_items_color">
+        android:layout_marginLeft="@dimen/recycler_elements_margin_20dp"
+        android:layout_marginRight="@dimen/recycler_elements_margin_20dp"
+        android:layout_marginBottom="@dimen/recycler_elements_margin_20dp"
+        android:background="@color/recycler_items_color">
 
 
     </ImageView>
 
     <TextView
-        android:textSize="@dimen/text_size_item_15sp"
+        android:textSize="@dimen/recycler_item_text_size_15sp"
         android:id="@+id/textViewDescription"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginRight="@dimen/margin_element_in_recycler_20dp"
-        android:layout_marginBottom="@dimen/margin_element_in_recycler_20dp"
+        android:layout_marginRight="@dimen/recycler_elements_margin_20dp"
+        android:layout_marginBottom="@dimen/recycler_elements_margin_20dp"
         android:layout_weight="1"
-        android:background="@color/app_items_color"
-        android:minHeight="@dimen/side_of_square_image_80dp"
+        android:background="@color/recycler_items_color"
+        android:minHeight="@dimen/recycler_square_image_side_80dp"
         android:text=""
         android:textColor="@android:color/black" />
 

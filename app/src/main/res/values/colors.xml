@@ -8,9 +8,9 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
 
-    <color name="app_items_color">#A6BCC6</color>
-    <color name="app_list_background">#D6F1FE</color>
-    <color name="app_green_floating_button">#4CAF50</color>
-    <color name="app_red_improper_input">#C21345</color>
+    <color name="recycler_items_color">#A6BCC6</color>
+    <color name="recycler_background">#D6F1FE</color>
+    <color name="floating_button">#4CAF50</color>
+    <color name="dialog_text_improper_input">#C21345</color>
 
 </resources>

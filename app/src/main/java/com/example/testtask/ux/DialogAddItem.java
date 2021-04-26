@@ -33,14 +33,26 @@ public class DialogAddItem extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         initializeViews();
 
-        addTextChangeListenerEmptyDescription();
+        addEditTextEmptyDescriptionListener();
         mTextViewImproperInput.setVisibility(View.INVISIBLE);
 
         Dialog dialogWithSettings = createDialogWithSettings();
         return dialogWithSettings;
     }
 
-    private void addTextChangeListenerEmptyDescription() {
+
+    private void initializeViews() {
+
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        mBaseView = inflater.inflate(R.layout.dialog_add_item, null);
+
+        mEditTextIconUrl = mBaseView.findViewById(R.id.editTextIconUrl);
+        mEditTextDescription = mBaseView.findViewById(R.id.editTextDescription);
+        mTextViewImproperInput = mBaseView.findViewById(R.id.textViewImproperInput);
+    }
+
+
+    private void addEditTextEmptyDescriptionListener() {
         mEditTextDescription.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -59,15 +71,6 @@ public class DialogAddItem extends AppCompatDialogFragment {
         });
     }
 
-    private void initializeViews() {
-
-        LayoutInflater inflater = getActivity().getLayoutInflater();
-        mBaseView = inflater.inflate(R.layout.dialog_add_item, null);
-
-        mEditTextIconUrl = mBaseView.findViewById(R.id.editTextIconUrl);
-        mEditTextDescription = mBaseView.findViewById(R.id.editTextDescription);
-        mTextViewImproperInput = mBaseView.findViewById(R.id.textViewImproperInput);
-    }
 
     private Dialog createDialogWithSettings() {
 
@@ -114,6 +117,7 @@ public class DialogAddItem extends AppCompatDialogFragment {
         String description = mEditTextDescription.getText().toString();
         mListener.onDataProvided(iconUrl, description);
     }
+
 
     @Override
     public void onAttach(Context context) {

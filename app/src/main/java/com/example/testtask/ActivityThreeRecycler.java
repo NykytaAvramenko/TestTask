@@ -16,18 +16,14 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ActivityThreeRecycler extends AppCompatActivity implements DialogAddItem.AddItemDialogListener {
 
-
     private RecyclerView mRecycler;
     private RecyclerAdapter mAdapter;
-
     private ListItemsDbMediatorInterface mDatabase;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler);
-
 
         mRecycler = findViewById(R.id.recyclerView);
         mDatabase = ListItemsDbMediator.getListItemsDb(this);
@@ -59,6 +55,6 @@ public class ActivityThreeRecycler extends AppCompatActivity implements DialogAd
     @Override
     public void onDataProvided(String iconUrl, String description) {
         mDatabase.addToDB(ListItemModel.getNewListItem(iconUrl, description));
-        mAdapter.swapCursor(mDatabase.getAllListItems());
+        mAdapter.swapList(mDatabase.getAllListItems());
     }
 }

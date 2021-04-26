@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@color/app_list_background"
+    android:background="@color/recycler_background"
     tools:context=".ActivityThreeRecycler">
 
 
@@ -15,20 +15,20 @@
 
         android:layout_height="match_parent"
         android:clipToPadding="false"
-        android:paddingTop="@dimen/margin_element_in_recycler_20dp"
+        android:paddingTop="@dimen/recycler_elements_margin_20dp"
         android:scrollbars="vertical" />
 
 
     <com.example.testtask.ux.MovableFloatingActionButton
 
         android:id="@+id/floating_action_button"
-        android:layout_width="@dimen/side_of_square_image_80dp"
-        android:layout_height="@dimen/side_of_square_image_80dp"
-        android:layout_margin="@dimen/margin_element_in_recycler_20dp"
+        android:layout_width="@dimen/recycler_square_image_side_80dp"
+        android:layout_height="@dimen/recycler_square_image_side_80dp"
+        android:layout_margin="@dimen/recycler_elements_margin_20dp"
 
         android:tint="@color/white"
-        app:backgroundTint="@color/app_green_floating_button"
-        app:fabCustomSize="@dimen/side_of_square_image_80dp"
+        app:backgroundTint="@color/floating_button"
+        app:fabCustomSize="@dimen/recycler_square_image_side_80dp"
         app:layout_constraintBottom_toBottomOf="parent"
 
         app:layout_constraintEnd_toEndOf="parent"

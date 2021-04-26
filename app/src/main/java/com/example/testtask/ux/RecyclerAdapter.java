@@ -36,7 +36,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListIt
             mTextViewDescription = itemView.findViewById(R.id.textViewDescription);
         }
 
-        public void loadToImageViewFromURL(String url) {
+        public void loadToImageViewFromUrl(String url) {
             Glide.with(itemView)
                     .load(url)
                     .error(R.drawable.on_error_placeholder_00)
@@ -61,7 +61,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListIt
     public void onBindViewHolder(ListItemViewHolder holder, int position) {
         String iconUrl = mAllItems.get(position).getIconUrl();
         String description = mAllItems.get(position).getDescription();
-        holder.loadToImageViewFromURL(iconUrl);
+        holder.loadToImageViewFromUrl(iconUrl);
         holder.setDescriptionText(description);
     }
 
@@ -70,7 +70,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ListIt
         return mAllItems.size();
     }
 
-    public void swapCursor(List<ListItemReadableInterface> newList) {
+    public void swapList(List<ListItemReadableInterface> newList) {
         mAllItems = newList;
         notifyDataSetChanged();
     }

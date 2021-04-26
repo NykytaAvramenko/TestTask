@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="side_of_square_image_80dp">80dp</dimen>
-    <dimen name="margin_element_in_recycler_20dp">20dp</dimen>
+    <dimen name="recycler_square_image_side_80dp">80dp</dimen>
+    <dimen name="recycler_elements_margin_20dp">20dp</dimen>
     <dimen name="edit_text_url_max_height_100dp">100dp</dimen>
-    <dimen name="text_size">17sp</dimen>
-    <dimen name="text_size_item_15sp">15sp</dimen>
+    <dimen name="dialog_text_size_17sp">17sp</dimen>
+    <dimen name="recycler_item_text_size_15sp">15sp</dimen>
 </resources>

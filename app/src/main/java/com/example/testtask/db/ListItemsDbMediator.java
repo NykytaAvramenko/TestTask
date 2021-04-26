@@ -72,9 +72,9 @@ public class ListItemsDbMediator implements ListItemsDbMediatorInterface {
         mAllItems = new LinkedList<>();
         for (int i = 0; i < mLatestCursor.getCount(); i++) {
             mLatestCursor.moveToPosition(i);
-            String iconURL = mLatestCursor.getString(mLatestCursor.getColumnIndex(COLUMN_ICON_URL));
+            String iconUrl = mLatestCursor.getString(mLatestCursor.getColumnIndex(COLUMN_ICON_URL));
             String description = mLatestCursor.getString(mLatestCursor.getColumnIndex(COLUMN_DESCRIPTION));
-            mAllItems.add(ListItemModel.getNewListItem(iconURL, description));
+            mAllItems.add(ListItemModel.getNewListItem(iconUrl, description));
         }
     }
 
@@ -87,9 +87,9 @@ public class ListItemsDbMediator implements ListItemsDbMediatorInterface {
         latestUpdate = false;
     }
 
-    private void addItemOnlyToDB(String imageURL, String description) {
+    private void addItemOnlyToDB(String iconUrl, String description) {
         ContentValues cv = new ContentValues();
-        cv.put(COLUMN_ICON_URL, imageURL);
+        cv.put(COLUMN_ICON_URL, iconUrl);
         cv.put(COLUMN_DESCRIPTION, description);
         mDatabase.insert(TABLE_NAME, null, cv);
     }
